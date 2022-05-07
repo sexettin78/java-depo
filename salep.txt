@@ -1,0 +1,60 @@
+javada değişkenler değer atamadan tanımlanmaz. başlangıç değeri atamak zorunludur.
+char değişkenler tek tırnak ve char ön adı ile tanımlanır.
+byte -128 ile 127 arası değer alır
+short -32768 ile 32767 arası değer alır
+string değişkenler çift tırnakla ve string ön adı ile tanımlanır
+birleştirme operatörü +
+integer j = new integer(6) //referans tipindeki değişken
+string default olarak referans tipindeki değişkendir
+Integer tipindeki bir değişkene null değeri verebiliriz fakat  int tipinde bu mümkün değildir
+sabitler "final" ön adı alır. sabit değişken tanımlama = final int x = 5;
+
+#############VERİ DÖNÜŞÜMLERİ######################
+ilk olarak  String'den int'e dönüştürmeyi görelim. Bunun için 2 tane yol var. Bunlardan birisi parseInt diğeri valueOf
+"""""""
+String degisken="5";
+int yeni1 = Integer.valueOf(degisken);
+int yeni2 = Integer.parseInt(degisken);
+"""""""
+parseInt, valueOf'dan daha hızlı
+parseInt int tipinde veri döndürürken valueOf Integer tipinde bir nesne döndürür
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+Şimdi ise int'den string'e çevirelim. bunun için2 yol var birisi toString diğeri valueOf
+"""""""
+int sayi1=9;
+String deger1=String.valueOf(sayi1);
+String deger2=Integer.toString(sayi1);
+"""""""
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+double'yi int'e çevirelim
+"""""""
+double sayi=345.2;
+int sayi2=(int)sayi;
+"""""""
+
+int'i doubleye çevirelim
+"""""""
+int sayi=345;
+double sayi2=(double)sayi;
+""""""""
+
+float'tan long'a
+""""""""
+float sayi=345.6f;
+long sayi2=(long)sayi;
+""""""""
+
+###################################################
+sayılarda tanımlama yaparken alt çizgi kullanılabilir.
+int tel=444_621_21_21; gibi
+
+referans tipler new anahtar kelimesi ile oluşturulur.
+sınıf nesnelerinin ilkel tipe dönüştürülmelerine unboxing(kutu açma) denir
+metod içine tanımlanıp, metod dışına çıkıldığında değeri kaybolan değişkenler locale (yerel değişkenlerdir)
+xor  = işaretler birbirinden farklı olduğu zaman true değerini döndürür
+
+
+
