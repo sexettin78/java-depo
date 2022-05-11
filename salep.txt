@@ -55,6 +55,75 @@ referans tipler new anahtar kelimesi ile oluşturulur.
 sınıf nesnelerinin ilkel tipe dönüştürülmelerine unboxing(kutu açma) denir
 metod içine tanımlanıp, metod dışına çıkıldığında değeri kaybolan değişkenler locale (yerel değişkenlerdir)
 xor  = işaretler birbirinden farklı olduğu zaman true değerini döndürür
+~ = bitleri tersine çevirir. 1 ise 0, 0 ise 1 yapar. 
+
+İŞLEM ÖNCELİKLERİ
+1- parantezler, dizi elemanlarına erişme []
+2- sona yazılan ++ ve -- operatörleri
+3- başa yazılan ++ ve -- operatörleri
+4- new ile yeni nesne üretme
+5- çarpma, bölme, mod alma * / %
+6- toplama, çıkartma, string toplama + -
+7- kaydırma operatörleri << >> 
+8- ilişkisel operatörler < > <= =>
+9- mantıksal operatörler & | ^
+
+if(koşul){
+işlemler
+}
+
+switch(degisken){
+case a: degisken a'ya eşitse işlemler
+break;
+case b: degisken b'ye eşitse işlemler
+break;
+default: eğer degisken hiçbir şeye eşit değilse burası işlenir
+break;
+}
+
+
+
+--------------VERİ ALMA (1)----------------
+veri almak için öncelikle import java.util.scanner yazıp scanner sınıfını aktarmamız gerekiyor
+Scanner sınıfı ile klavyeden veri okumak için öncelikle bu sınıftan bir nesne oluşturmak gerekir. Örnek:
+Scanner veriAl = new Scanner(System.in); //veriAl nesnesi oluşturuldu
+
+int sayi = veriAl.nextInt(); //int tipinde bir sayı alıp bunu sayi değişkenine aktarır.
+nextByte() : byte türünde değer alır 
+nextShort() : short türünde değer alır 
+nextFloat() : float türünde değer alır 
+nextDouble() : double türünde değer alır 
+nextBoolean() : mantıksal değer alır
+nextLine() : klavyeden string değer alır. tüm satırı okur. boşluk değeri olsa bile alır
+next() : klavyeden string değer alır fakat boşluk değerine kadar olan kısmı alır
+
+----------------------------------------
+
+println fonksiyonu = yazdıktan sonra diğer yazma veya veri alma işlemlerini alt satırda gerçekleştirir. print fonksiyonunda işlem sonuna \n eklenmiş hali de diyebiliriz.
+print fonksiyonu = işlemleri bulunduğu satırda gerçekleştirir.
+
+sonsuz döngü için = while(true){işlemler} veya for( ; ; ){işlemler}
+
+*******************************************
+GELİŞMİŞ FOR DÖNGÜSÜ: bak şimdi mesela for ile bir dizi elemanı listeleyecek olsak, başlangıç olarak ilk indisi, bitiş değerini ve artış miktarını vererek dizinin her elemanını ekrana yazdırmamız gerekirdi fakat bunun daha kolay yolu foreach dediğimiz döngüler örnek kullanım:
+int [] dizi={1,2,3,4,5};
+for(int i: dizi){
+System.out.print(i+" ");
+}
+ÇIKTI: 1 2 3 4 5 
+*******************************************
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Erişim_belirleyici Dönüş_tipi Metod_Adı (parametreler){
+metod gövdesi
+}
+
+erişim belirleyicisi = metoda nasıl erişileceğini gösterir
+dönüş tipi = metoddan dönecek olan değerin tipidir. bu int, string, object, gibi tipler olabilir eğer geriye değer döndürmüyorsa void olarak tanımlanmalıdır
+metod adı = metoda verilecek isimdir. daha sonra bu ismi kullanarak çağıracağız
+parametre listesi = kullanılması için göndereceğimiz değerlerdir
+metod gövdesi = metodun yapılacağı işler yazılır
+
 
 
 
