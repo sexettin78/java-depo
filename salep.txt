@@ -125,5 +125,104 @@ parametre listesi = kullanılması için göndereceğimiz değerlerdir
 metod gövdesi = metodun yapılacağı işler yazılır
 
 
+dizi oluşturma örnekleri;
+int dizi[] = {1,2,3,4};
+String dizi[] = {"furkan","d"};
 
+eğer diziyi ilk satırda belirtmediysek daha sonra new ile belirtebiliriz. örneğin:
+int dizi[];
+dizi = new int[] {1,2,3,4};
+
+dizilere foreach ile ulaşmak:
+int array[] = {11,22,33,44,55};
+for(int i:array)
+System.out.println(i);
+
+eğer javada int bir dizi elemanını '' içerisinde çağırırsan ascıı kodunu alırsın:
+int dizi[] = {1,'2',3};
+System.out.println(dizi[1]) //2'nin ascıı karşılığını (50) çağırdık
+
+eğer dizi içerisine farklı türden eleman eklemek istersen dizeyi object sınıfında oluştur
+Object dizi[] = new Object[]; gibi
+
+dizi.length yaparak dizideki eleman sayısını öğrenebilirsin.
+
+System.arraycopy (kaynakdizi, kaynak dizinin başlangıç indisi, hedef dizi, hedef dizinin başlangıç indisi, adedi) #yaparak dizi kopyalayabiliriz.
+
+java.util.*; yaptıktan sonra Array.sort(dizi); yaparak diziyi sıralı hale getirebilirsin.
+Arrays.sort(dizi,1,4); yaparak parametre ile dizi sıralayabilirsin. burada verdiğimiz 1 ile 4 ibareleri, 1 ve 4. eleman arasını sırala demektir
+
+int deger = Arrays.binarySearch(dizi,12) //dizi içinde 12 elemanı aradık. eğer eleman mevcutsa deger adlı değişken 12'nin bulunduğu indise eşit olur, mevcut değilse 0'dan küçük değer alır
+
+Arrays.equals(dizi,dizi2); yaparak dizi1'in dizi2'ye eşit olup olmadığına bakabilirsin.
+
+2boyutlu dizi tanımlama:
+int dizi[] []= new int [2] [3] //2 satır 3 sütunlu dizi
+
+byte ucboyutludizi [] [] [] = new byte [2] [3] [4] //2=x 3=y 4=z
+
+int matris[] [] = new int[] [] {{3,6},{5,7}}; 
+System.out.println(matris[1][0]); //çıktı=5
+
+iki boyutlu dizilerde matrislerin hangisinin eleman sayısını bulmak istersek örneğin 0: dizi[0].length yaparız
+ 
+yenidizi = Arrays.copyOf(dizi,3); yaparak dizimizdeki 3 elemanı yenidiziye kopyaladık
+yenidizi = Arrays.copyOfRange(dizi,3,6); yaparak dizimizdeki 3-6 elemanları arasını yenidiziye kopyaladık
+
+YUKARIDAKİ BİRÇOK İŞLEM java.util.* GEREKTİRİR
+
+fill(Object array[], Object value);
+fill(Object array[], int baslangic, int bitis, Object value);
+Integer dizi[] = {0,0,0,0,0};
+Integer dizi2[] = {1,1,1,1,1};
+Arrays.fill(dizi,1);
+Arrays.fill(dizi2,2,4,0);
+Yukarıda ilk olarak dizi adlı dizimizi 1'ler ile doldurduk aşağıda ise dizi2'nin 2-4 arası elemanlarını 0 ile doldurduk. ilkin çıktısı:11111 ikincinin çıktısı:11001
+
+
+Random sayı atama:
+Random r =new Random();
+int sayi2=r.nextInt(X);
+Buradaki X'e kadar 0 ile X arası değer atar
+
+
+---------------------JOPTIONPANE-----------------
+import javax.swing.JOptionPane; >>> yazarak kütüphanemizi ekliyoruz
+
+veri almak için >>> JOptionPane.showInputDialog("input mesajı");
+örneğin
+String sayi = JOptionPane.showInputDialog("sayı giriniz");
+
+BU KÜTÜPHANEDE GİRİLEN VERİLER STRING DEĞERDEDİR.
+peki aldığımız değişkeni int olarak kullanmak istersek? o zaman>>> int yenisayi = Integer.parseInt(sayi);
+yazarak aldığımız string sayıyı, yenisayi adındaki int değişkene aktarıyoruz
+
+bilgi mesajı gönderme >>> JOptionPane.showMessageDialog(null, "mesajımız");
+başlık değiştirmek için > JOptionPane.showMessageDialog(null, "mesajımız", "baslik");
+tuş değiştirmek için > JOptionPane.showMessageDialog(null, "mesajımız", "baslik", JOptionPane.OK_OPTION); //OK tuşu getirdik
+warning mesajı için > JOptionPane.WARNING_MESSAGE
+
+
+
+-----------NESNE YÖNELİMLİ PROGRAMLAMA-----------
+erisim_belirleyici class sinif_ismi
+{
+// özellikler
+// metodlar
+// yapıcılar
+}
+
+örnek:
+public class insan
+{
+double boy;
+String cinsiyet;
+int yas;
+}
+
+new anahtar kelimesi ile nesne oluşturma:
+Insan furkan = new Insan();
+
+sınıf değişkenlerini static ile belirtiriz. örneğin static int sayi = 5; gibi. burada sayi değişkenine ne atarsak atayalım hep 5 olacak çünkü static olarak belirttik.
+static olarak belirtilen değişkenlere sadece sınıf adı ile ulaşabiliriz. örneğin sınıf adımız insan ve static olarak belirttiğimiz değişkenimiz ad ise, insan.ad ile değişkenimizi çağırabiliriz 
 
